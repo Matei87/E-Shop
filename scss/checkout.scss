@@ -231,16 +231,16 @@ h2, h3 {
     padding: 0;
   }
   .container .page .item .items .item-quantity {
-    font-size: 15px;
+    font-size: 15px; padding: 0;
   }
   .container .page .item .items .item-quantity .item-removeButton {
-    margin: 0;
+    margin-left: 5%; padding: 0;
   }
   .container .page .item .items .item-price {
-    margin-left: 15%; padding: 0;
+    margin-left: 10%; width: 25%; padding: 0;
   }
   .container .page .item .items .item-total {
-    margin-left: 5%; padding-right: 0;
+    padding: 0; margin: 0; width: 25%;
   }
   .container .page .total {
     padding: 15px 6% 0 0; font-size: 17px;
@@ -263,20 +263,10 @@ h2, h3 {
   .container .page .item .items .item-quantity .item-quantity-modify .item-arrow-right {
     padding: 0 7px; margin: 0;
   }
-  .container .page .item .items .item-quantity .item-removeButton {
-    margin-left: 5%; padding: 0;
+  #payme .table-responsive table tbody tr td.pay {
+    padding-left: 7px !important; padding-right: 0 !important;
+    width: 20%;
   }
-  .container .page .item .items .item-price {
-    margin-left: 10%; width: 25%;
-  }
-  .container .page .item .items .item-quantity {
-    padding: 0;
-  }
-
-  .container .page .item .items .item-total {
-    padding: 0; margin: 0; width: 25%;
-  }
-
 }
 
 
