@@ -121,6 +121,7 @@ h2, h3 {
   display: none;
 }
 #payme .container {
+  position: relative;
   padding: 20px 60px;
 }
 #payme .container .row {
@@ -172,20 +173,6 @@ h2, h3 {
   width: 49%;
   margin-left: 1%;
 }
-#payme .container .row .col-6 form#billing button {
-  color: #528CE0;
-  border-color: #528CE0;
-  margin-top: 30px;
-  padding: 5px 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#payme .container .row .col-6 form#billing button:hover {
-  background: #528CE0;
-  color: #f4f5f6;
-  border-color: #528CE0;
-}
 
 #payme .list-group {
   width: 100%;
@@ -226,6 +213,21 @@ h2, h3 {
 }
 #payme .list-group .col-12.col-md-4:last-of-type .input-group .input-group-append {
   width: 30%;
+}
+
+#payme .table-responsive button {
+  color: #528CE0;
+  border-color: #528CE0;
+  margin: 30px 0;
+  padding: 5px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#payme .table-responsive button:hover {
+  background: #528CE0;
+  color: #f4f5f6;
+  border-color: #528CE0;
 }
 
 #payme .table-responsive table tbody tr td .custom-control.custom-radio .custom-control-input:checked ~ .custom-control-label:before {
@@ -313,6 +315,36 @@ h2, h3 {
   #payme .row .col-6 {
     max-width: 100%;
     flex-basis: 100%;
+  }
+
+  .container .page .item .items .item-quantity .item-quantity-modify .item-arrow-left {
+    padding: 0 7px;
+    margin: 0;
+  }
+
+  .container .page .item .items .item-quantity .item-quantity-modify .item-arrow-right {
+    padding: 0 7px;
+    margin: 0;
+  }
+
+  .container .page .item .items .item-quantity .item-removeButton {
+    margin-left: 5%;
+    padding: 0;
+  }
+
+  .container .page .item .items .item-price {
+    margin-left: 10%;
+    width: 25%;
+  }
+
+  .container .page .item .items .item-quantity {
+    padding: 0;
+  }
+
+  .container .page .item .items .item-total {
+    padding: 0;
+    margin: 0;
+    width: 25%;
   }
 }
 @media (min-width: 576px) and (max-width: 767.98px) {
