@@ -2,8 +2,6 @@
 
 let buttonAddToCart = document.querySelectorAll('.btn-outline-secondary');
 
-//Fiecare buton apasat
-// let items = document.getElementsByClassName('items');
 const buttons = (a) => {
     for (let i = 0; i < buttonAddToCart.length; i++) {
         buttonAddToCart[i].addEventListener('click', () => {
@@ -13,7 +11,6 @@ const buttons = (a) => {
     }
 };
 
-//Setez numarul de produse in .cart-icon span si cand se da refresh la pagina
 function onLoadCartNumbers() {
     let productNumbers = localStorage.getItem('cartNumbers');
     if (productNumbers){
@@ -21,8 +18,6 @@ function onLoadCartNumbers() {
     }
 }
 
-//Setez cantitatea in local storage si .cart-icon span sa creasca de fiecare data
-// cand dau click pe button
 function cartNumbers(product, action) {
     let productNumbers = localStorage.getItem('cartNumbers');
     productNumbers = Number(productNumbers);
@@ -44,8 +39,6 @@ function cartNumbers(product, action) {
     setItems(product);
 }
 
-//Setez produsele din local storage sa aiba product.tag si product
-//mai setez si cantitatea sa creasca la fiecare produs
 function setItems(product) {
     let cartItems = localStorage.getItem('productsInCart');
     cartItems = JSON.parse(cartItems);
@@ -69,22 +62,17 @@ function setItems(product) {
     localStorage.setItem('productsInCart', JSON.stringify(cartItems));
 }
 
-//Updatez costul total al produselor
 function totalCost(product, action){
-    //definesc cartCost ca fiind key cu numele totalCost
+    
     let cartCost = localStorage.getItem('totalCost');
     if ( action ){
-        //convertest cartCost in numar
         cartCost = Number(cartCost);
-        //setez in local storage key totalCost ca avand valoarea cartCost + pretul produsului
         localStorage.setItem('totalCost', (cartCost - product.price).toFixed(2));
 
-    //daca totalCost este strict diferit de null
     } else if ( cartCost != null ){
 
         cartCost = Number(cartCost);
         localStorage.setItem('totalCost', (cartCost + product.price).toFixed(2));
-    //daca totalCost este null definesc in local storage totalCost ca fiind pretul produsului
     } else {
         localStorage.setItem('totalCost', product.price);
     }
@@ -212,8 +200,7 @@ $(function () {
     $('[data-toggle="popover"]').popover();
 });
 
-//view #payme on click @ .container .btn-outline-dark
-$('.container .btn-outline-dark').on('click', function () {
+$('.click').on('click', function () {
     $('#payme').toggle();
 });
 
@@ -221,7 +208,6 @@ $('#checkoutPaypal').on('click', function () {
     $("#checkoutCollapse").collapse('hide');
 });
 
-//Arata an in footer
 let dataSite = document.querySelector('.anfooter');
 let date = new Date();
 let an = date.getFullYear();
