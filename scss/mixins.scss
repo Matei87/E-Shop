@@ -1,0 +1,8 @@
+@mixin flexFullCentered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin flexfull($choose){
+  display: flex; justify-content: $choose; align-items: center;
+}

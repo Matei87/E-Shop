@@ -1,0 +1,172 @@
+
+
+header + .container-fluid {
+  height: 20px; padding: 0;
+  width: 100%; background: #dadada;
+  ul {
+    margin: 0 0 0 75px; padding: 0; list-style-type: none;
+    display: flex;
+    li {
+      padding: 0 6px 0 11px; position: relative;
+      a {
+        color: #191919;
+      }
+    }
+  }
+}
+
+header + .container-fluid ul li:first-child {
+  padding-left: 0;
+  &:hover a {
+    color: #528CE0; transition: all .2ms;
+  }
+}
+header + .container-fluid ul li:nth-child(2)::before {
+  content: "/"; position: absolute; left: 0;
+}
+
+#content {  border: 2px solid black;
+  margin-top: 20px;
+  .container-fluid {
+    padding: 0 20px;
+    h4 {
+      margin-left: 60px;
+      font-weight: 600; font-size: 20px;
+    }
+    .row {
+      border: 2px solid saddlebrown;
+    }
+  }
+}
+
+.row .col-2 { border: 2px solid red;
+  max-width: 150px;
+  margin-left: 60px;
+}
+.row .col-2 .list-group-item {
+  border: none; padding: 0;
+}
+.row .col-2 .list-group-item span {
+  float: right; border: none;
+}
+#list-tab .active {
+  color: #007bff; margin: 0;
+  background: none; border: none;
+}
+.row .col-10 {
+  border: 2px solid yellow;
+}
+
+/*CONTINUT*/
+#continut-new, #continut-sale, #continut-women,
+#continut-men, #continut-accesories, #continut-shoes {
+  /*border: 2px solid red; */
+  margin-left: 20px; margin-top: 10px; margin-right: 20px;
+}
+#continut-new h2, #continut-sale h2, #continut-women h2,
+#continut-men h2, #continut-accesories h2, #continut-shoes h2 {
+  position: relative; width: 7%;
+  /*border: 2px solid red;*/
+  display: flex; align-items: center;
+}
+#continut-new h2:hover, #continut-sale h2:hover, #continut-women h2:hover,
+#continut-men h2:hover, #continut-accesories h2:hover, #continut-shoes h2:hover {
+  cursor: pointer; position: relative; transition: all .6s;
+}
+#continut-new h2:hover span:first-child, #continut-sale h2:hover span:first-child, #continut-women h2:hover span:first-child,
+#continut-men h2:hover span:first-child, #continut-accesories h2:hover span:first-child, #continut-shoes h2:hover span:first-child {
+  visibility: hidden; opacity: 0;
+}
+#continut-new h2 a, #continut-sale h2 a, #continut-women h2 a,
+#continut-men h2 a, #continut-accesories h2 a, #continut-shoes h2 a {
+  position: absolute;  left: 0; visibility: hidden; opacity: 0;
+  font-size: 20px; padding: 0; margin: 0; color: #191919;
+}
+#continut-new h2 i, #continut-sale h2 i, #continut-women h2 i, #continut-men h2 i,
+#continut-accesories h2 i, #continut-shoes h2 i {
+  display: flex; justify-content: center; align-items: center;
+  transition: all .2s; position: absolute;
+  font-size: 16px; margin-left: 5px;
+}
+#continut-new h2 i {
+  left: 65px;
+}
+#continut-sale h2 i {
+  left: 60px;
+}
+#continut-women h2 i {
+  left: 115px;
+}
+#continut-men h2 i {
+  left: 65px;
+}
+#continut-accesories h2 i {
+  left: 150px;
+}
+#continut-shoes h2 i {
+  left: 85px;
+}
+#continut-new h2:hover a, #continut-sale h2:hover a, #continut-women h2:hover a,
+#continut-men h2:hover a, #continut-accesories h2:hover a, #continut-shoes h2:hover a {
+  visibility: visible; opacity: 1; transition: all 1.5s; color: #191919;
+}
+#continut-new h2:hover i, #continut-sale h2:hover i, #continut-women h2:hover i,
+#continut-men h2:hover i, #continut-accesories h2:hover i, #continut-shoes h2:hover i {
+  visibility: visible; opacity: 1; position: absolute; left: 120px;
+}
+#continut-new .container-fluid, #continut-sale .container-fluid, #continut-women .container-fluid,
+#continut-men .container-fluid, #continut-accesories .container-fluid, #continut-shoes .container-fluid {
+  /*border: 2px solid blue;*/
+}
+#continut-new .container-fluid .row, #continut-sale .container-fluid .row, #continut-women .container-fluid .row,
+#continut-men .container-fluid .row, #continut-accesories .container-fluid .row, #continut-shoes .container-fluid .row {
+  /*border: 2px solid black;*/
+  display: flex; justify-content: space-between;
+}
+#continut-new .container-fluid .row .col-3, #continut-sale .container-fluid .row .col-3, #continut-women .container-fluid .row .col-3,
+#continut-men .container-fluid .row .col-3, #continut-accesories .container-fluid .row .col-3, #continut-shoes .container-fluid .row .col-3 {
+  /*border: 2px solid red;*/
+  padding: 0; overflow: hidden;
+  height: 450px; max-width: 320px; text-align: center;
+}
+#continut-new .container-fluid .row .col-3 img, #continut-sale .container-fluid .row .col-3 img, #continut-women .container-fluid .row .col-3 img,
+#continut-men .container-fluid .row .col-3 img, #continut-accesories .container-fluid .row .col-3 img, #continut-shoes .container-fluid .row .col-3 img {
+  height: 90%; width: 100%; object-fit: cover; object-position: center 30%;
+}
+#continut-new .container-fluid .row .col-3 .name, #continut-sale .container-fluid .row .col-3 .name, #continut-women .container-fluid .row .col-3 .name,
+#continut-men .container-fluid .row .col-3 .name, #continut-accesories .container-fluid .row .col-3 .name, #continut-shoes .container-fluid .row .col-3 .name {
+  height: 10%;
+  display: flex; justify-content: center; align-items: center;
+}
+#continut-new .container-fluid .row .col-3 .content-wrapped, #continut-sale .container-fluid .row .col-3 .content-wrapped, #continut-women .container-fluid .row .col-3 .content-wrapped,
+#continut-men .container-fluid .row .col-3 .content-wrapped, #continut-accesories .container-fluid .row .col-3 .content-wrapped, #continut-shoes .container-fluid .row .col-3 .content-wrapped {
+  height: 100%; transition: all .5s; background: white;
+}
+#continut-new .container-fluid .row .col-3 .content-wrapped button, #continut-sale .container-fluid .row .col-3 .content-wrapped button, #continut-women .container-fluid .row .col-3 .content-wrapped button,
+#continut-men .container-fluid .row .col-3 .content-wrapped button, #continut-accesories .container-fluid .row .col-3 .content-wrapped button, #continut-shoes .container-fluid .row .col-3 .content-wrapped button {
+  color: #191919; border-color: #191919;
+}
+#continut-new .container-fluid .row .col-3 .content-wrapped button i, #continut-sale .container-fluid .row .col-3 .content-wrapped button i, #continut-women .container-fluid .row .col-3 .content-wrapped button i,
+#continut-men .container-fluid .row .col-3 .content-wrapped button i, #continut-accesories .container-fluid .row .col-3 .content-wrapped button i, #continut-shoes .container-fluid .row .col-3 .content-wrapped button i {
+  margin-right: 10px;
+}
+#continut-new .container-fluid .row .col-3 .content-wrapped button:hover, #continut-sale .container-fluid .row .col-3 .content-wrapped button:hover, #continut-women .container-fluid .row .col-3 .content-wrapped button:hover,
+#continut-men .container-fluid .row .col-3 .content-wrapped button:hover, #continut-accesories .container-fluid .row .col-3 .content-wrapped button:hover, #continut-shoes .container-fluid .row .col-3 .content-wrapped button:hover {
+  background: #191919; color: rgba(253, 255, 252, .9);
+}
+#continut-new .container-fluid .row .col-3:hover, #continut-sale .container-fluid .row .col-3:hover, #continut-women .container-fluid .row .col-3:hover,
+#continut-men .container-fluid .row .col-3:hover, #continut-accesories .container-fluid .row .col-3:hover, #continut-shoes .container-fluid .row .col-3:hover {
+  cursor: pointer;
+}
+#continut-new .container-fluid .row .col-3:hover .content-wrapped, #continut-sale .container-fluid .row .col-3:hover .content-wrapped,#continut-women .container-fluid .row .col-3:hover .content-wrapped,
+#continut-men .container-fluid .row .col-3:hover .content-wrapped, #continut-accesories .container-fluid .row .col-3:hover .content-wrapped, #continut-shoes .container-fluid .row .col-3:hover .content-wrapped {
+  transform: translate(0, -50px); transition: all .5s;
+}
+#continut-new .container-fluid .row .col-3 .name span:nth-child(2), #continut-sale .container-fluid .row .col-3 .name span:nth-child(2), #continut-women .container-fluid .row .col-3 .name span:nth-child(2),
+#continut-men .container-fluid .row .col-3 .name span:nth-child(2), #continut-accesories .container-fluid .row .col-3 .name span:nth-child(2), #continut-shoes .container-fluid .row .col-3 .name span:nth-child(2) {
+  font-weight: 600; margin-left: 5px;
+}
+
+
+
+

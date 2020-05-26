@@ -1,0 +1,228 @@
+"use strict";
+
+let buttonAddToCart = document.querySelectorAll('.btn-outline-secondary');
+
+//Fiecare buton apasat
+// let items = document.getElementsByClassName('items');
+const buttons = (a) => {
+    for (let i = 0; i < buttonAddToCart.length; i++) {
+        buttonAddToCart[i].addEventListener('click', () => {
+            cartNumbers(a[i]);
+            totalCost(a[i]);
+        });
+    }
+};
+
+//Setez numarul de produse in .cart-icon span si cand se da refresh la pagina
+function onLoadCartNumbers() {
+    let productNumbers = localStorage.getItem('cartNumbers');
+    if (productNumbers){
+        document.querySelector('.cart-icon span').textContent = productNumbers;
+    }
+}
+
+//Setez cantitatea in local storage si .cart-icon span sa creasca de fiecare data
+// cand dau click pe button
+function cartNumbers(product, action) {
+    let productNumbers = localStorage.getItem('cartNumbers');
+    productNumbers = Number(productNumbers);
+
+    if ( action ){
+
+        localStorage.setItem('cartNumbers', productNumbers - 1);
+        document.querySelector('.cart-icon span').textContent = productNumbers - 1;
+
+    } else if ( productNumbers ){
+
+        localStorage.setItem('cartNumbers', productNumbers + 1);
+        document.querySelector('.cart-icon span').textContent = productNumbers + 1;
+
+    } else {
+        localStorage.setItem('cartNumbers', 1);
+        document.querySelector('.cart-icon span').textContent = 1;
+    }
+    setItems(product);
+}
+
+//Setez produsele din local storage sa aiba product.tag si product
+//mai setez si cantitatea sa creasca la fiecare produs
+function setItems(product) {
+    let cartItems = localStorage.getItem('productsInCart');
+    cartItems = JSON.parse(cartItems);
+    console.log(cartItems);
+    if ( cartItems !== null ){
+        if( cartItems[product.tag] === undefined ){
+            cartItems = {
+                    ...cartItems,
+                [product.tag]: product
+            };
+        }
+        cartItems[product.tag].quantity += 1;
+    } else {
+        product.quantity = 1;
+        cartItems = {
+            [product.tag]: product
+        };
+    }
+    console.log(cartItems[product.tag], product.id);
+
+    localStorage.setItem('productsInCart', JSON.stringify(cartItems));
+}
+
+//Updatez costul total al produselor
+function totalCost(product, action){
+    //definesc cartCost ca fiind key cu numele totalCost
+    let cartCost = localStorage.getItem('totalCost');
+    if ( action ){
+        //convertest cartCost in numar
+        cartCost = Number(cartCost);
+        //setez in local storage key totalCost ca avand valoarea cartCost + pretul produsului
+        localStorage.setItem('totalCost', (cartCost - product.price).toFixed(2));
+
+    //daca totalCost este strict diferit de null
+    } else if ( cartCost != null ){
+
+        cartCost = Number(cartCost);
+        localStorage.setItem('totalCost', (cartCost + product.price).toFixed(2));
+    //daca totalCost este null definesc in local storage totalCost ca fiind pretul produsului
+    } else {
+        localStorage.setItem('totalCost', product.price);
+    }
+
+}
+
+function displayCart() {
+        let cartItems = localStorage.getItem('productsInCart');
+        cartItems = JSON.parse(cartItems);
+        let itemContainer = document.querySelector('.item');
+        let cartCost = localStorage.getItem('totalCost');
+
+        if (cartItems && itemContainer){
+            itemContainer.innerHTML = '';
+            Object.values(cartItems).map( i => { console.log(i);
+                itemContainer.innerHTML += `
+                <div class="items col-md-12">
+                    <div class="item-imageContainer">
+                        <img src="./img/${i.tag}.png">
+                    </div>
+                    <span class="item-name col-md-2">${i.name}</span>
+                    <span class="item-quantity col-md-2">
+                        <div class="item-quantity-modify">
+                            <div class="item-arrow-left"><i class="fas fa-chevron-left"></i></div>
+                            <span class="item-value">${i.quantity}</span>
+                            <div class="item-arrow-right"><i class="fas fa-chevron-right"></i></div>
+                        </div>
+                        <div class="item-removeButton col-md-2"><i class="fas fa-times"></i></div>
+                    </span>
+                    <span class="item-price col-md-2">${(i.price).toFixed(2)}  €</span>
+                    <div class="item-total col-md-2"> ${(i.quantity * i.price).toFixed(2)} €</div>
+                </div>`;
+            });
+
+            cartCost = Number(cartCost).toFixed(2);
+            document.querySelector('.total').innerHTML = `<span>TOTAL: ${cartCost}  €</span> `;
+
+            deletecartRow();
+            modifyQuantity();
+        }
+}
+
+
+function modifyQuantity() {
+    let up = document.querySelectorAll('.item-arrow-right');
+    let down = document.querySelectorAll('.item-arrow-left');
+    let curentQuantity = 0;
+    let curentProduct = ' ';
+    let cartItems = localStorage.getItem('productsInCart');
+    cartItems = JSON.parse(cartItems);
+
+    for (let i = 0; i < up.length; i++){
+            down[i].addEventListener('click', function () {
+               console.log(cartItems);
+                curentQuantity = down[i].parentElement.querySelector('span').textContent;
+                curentProduct = down[i].parentElement.parentElement.parentElement.querySelector('span').textContent.toLocaleLowerCase().replace(/ /g,'').trim();
+                console.log(curentProduct);
+
+                if (cartItems[curentProduct].quantity > 1){
+                    cartItems[curentProduct].quantity -= 1;
+                    cartNumbers(cartItems[curentProduct], 'down');
+                    totalCost(cartItems[curentProduct], 'down');
+                    localStorage.setItem('productsInCart', JSON.stringify(cartItems));
+                    displayCart();
+                }
+            });
+
+        up[i].addEventListener('click', () => {
+            console.log(cartItems);
+            curentQuantity = up[i].parentElement.querySelector('span').textContent;
+            curentProduct = up[i].parentElement.parentElement.parentElement.querySelector('span').textContent.toLocaleLowerCase().replace(/ /g,'').trim();
+
+            cartItems[curentProduct].quantity += 1;
+            cartNumbers(cartItems[curentProduct]);
+            totalCost(cartItems[curentProduct]);
+            localStorage.setItem('productsInCart', JSON.stringify(cartItems));
+            displayCart();
+        });
+    }
+}
+
+function deletecartRow() {
+    let deleteButtons = document.querySelectorAll('.item-removeButton');
+    let productNumbers = localStorage.getItem('cartNumbers');
+    let cartCost = localStorage.getItem("totalCost");
+    let cartItems = localStorage.getItem('productsInCart');
+    cartItems = JSON.parse(cartItems);
+    let productName;
+    console.log(cartItems);
+
+
+    for(let i=0; i < deleteButtons.length; i++) {
+        deleteButtons[i].addEventListener('click', () => {
+            productName = deleteButtons[i].parentElement.previousElementSibling.textContent.toLocaleLowerCase().replace(/ /g,'').trim();
+
+            console.log(productName, productNumbers, cartItems);
+            localStorage.setItem('cartNumbers', productNumbers - cartItems[productName].quantity);
+            localStorage.setItem('totalCost', cartCost - (cartItems[productName].price * cartItems[productName].quantity));
+
+            delete cartItems[productName];
+            localStorage.setItem('productsInCart', JSON.stringify(cartItems));
+
+            displayCart();
+            onLoadCartNumbers();
+        });
+    }
+}
+
+onLoadCartNumbers();
+displayCart();
+
+
+$(".hovered").hover(
+    function() {  $(this).find(".dropdown-menu").stop(true, true).delay(100).fadeIn(400); },
+    function() { $(this).find(".dropdown-menu").stop(true, true).delay(100).fadeOut(400); }
+);
+$(".hovered").hover(
+    function () { $(this).addClass('show'); },
+    function() { $(this).removeClass('show');}
+);
+$('.navbar-nav>li>a').on('click', function(){
+    $('.navbar-collapse').collapse('hide');
+});
+$(function () {
+    $('[data-toggle="popover"]').popover();
+});
+
+//view #payme on click @ .container .btn-outline-dark
+$('.container .btn-outline-dark').on('click', function () {
+    $('#payme').toggle();
+});
+
+$('#checkoutPaypal').on('click', function () {
+    $("#checkoutCollapse").collapse('hide');
+});
+
+//Arata an in footer
+let dataSite = document.querySelector('.anfooter');
+let date = new Date();
+let an = date.getFullYear();
+dataSite.textContent = an;

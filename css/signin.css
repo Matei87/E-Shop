@@ -1,0 +1,149 @@
+.container {
+  width: 900px;
+  margin: 60px auto;
+  padding: 0;
+}
+.container .signin-signup {
+  display: flex;
+}
+.container .signin-signup .signin {
+  width: 49%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+.container .signin-signup .signin h3 {
+  margin: 0;
+  color: #191919;
+}
+.container .signin-signup .signin form#signAccount .form-group {
+  margin: 45px 0;
+  position: relative;
+}
+.container .signin-signup .signin form#signAccount .form-group i {
+  position: absolute;
+  left: 5%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 16px;
+  height: 16px;
+  opacity: 0.5;
+}
+.container .signin-signup .signin form#signAccount .form-group input {
+  width: 100%;
+  border: none;
+  font-style: italic;
+  color: #191919;
+  border-radius: 0.25rem;
+  padding: 10px 10px 10px 10%;
+}
+.container .signin-signup .signin form#signAccount .form-check {
+  margin: 0 0 30px;
+}
+.container .signin-signup .signin form#signAccount button {
+  color: #528CE0;
+  border-color: #528CE0;
+  padding: 5px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .signin-signup .signin form#signAccount button:hover {
+  background: #528CE0;
+  color: #f4f5f6;
+  border-color: #528CE0;
+}
+.container .signin-signup .signup {
+  width: 49%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+.container .signin-signup .signup h3 {
+  margin: 0;
+  color: #191919;
+}
+.container .signin-signup .signup form#createAccount .form-group {
+  margin: 45px 0;
+  position: relative;
+}
+.container .signin-signup .signup form#createAccount .form-group i {
+  position: absolute;
+  left: 5%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 16px;
+  height: 16px;
+  opacity: 0.5;
+}
+.container .signin-signup .signup form#createAccount .form-group i.fa-lock {
+  position: absolute;
+  left: 5%;
+  top: 34%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .signin-signup .signup form#createAccount .form-group input {
+  width: 100%;
+  border: none;
+  font-style: italic;
+  color: #191919;
+  border-radius: 0.25rem;
+  padding: 10px 10px 10px 10%;
+}
+.container .signin-signup .signup form#createAccount .form-group small {
+  margin: 0;
+  font-style: italic;
+  color: #528CE0 !important;
+}
+.container .signin-signup .signup form#createAccount .form-group:last-of-type {
+  margin: 45px 0 30px;
+  position: relative;
+}
+.container .signin-signup .signup form#createAccount button {
+  color: #528CE0;
+  border-color: #528CE0;
+  padding: 5px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .signin-signup .signup form#createAccount button:hover {
+  background: #528CE0;
+  color: #f4f5f6;
+  border-color: #528CE0;
+}
+
+@media (max-width: 575.98px) {
+  .container {
+    width: 100%;
+  }
+
+  .container .row {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container .col-sm-12:first-of-type {
+    margin-bottom: 40px;
+  }
+
+  .container .row .col-sm-12 {
+    flex-basis: 100%;
+    width: 100%;
+    padding: 0 60px;
+  }
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .container .col-sm-12:first-of-type {
+    margin-bottom: 40px;
+  }
+
+  .container .row .col-sm-12 {
+    padding: 0 60px;
+  }
+}
