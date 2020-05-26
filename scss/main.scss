@@ -243,22 +243,30 @@ footer {
     > a {
       width: 40%;
       .logo {
-        margin-left: 20px;
+        margin-left: 0;
       }
     }
     .options.navbar-collapse {
       width: 60%;
       ul {
+        align-items: flex-end;
         li.nav-item {
-          .cart-icon {
-            margin-right: 20px;
+          .option {
+            padding-right: 0;
+            .cart-icon {
+              margin-right: 10px;
+            }
           }
         }
       }
     }
   }
+
+  #slider .container-fluid .row #tns1-iw #tns1 .tns-item img {
+    width: 100vw !important;
+  }
   #footer-aux .conta {
-    width: 75%;
+    width: 90%;
     .conta-row {
       @include flexFullCentered;
 
@@ -266,9 +274,10 @@ footer {
         @include flexFullCentered;
         width: 100%;
         h2 {
-          font-size: 14px;
+          font-size: 12px;
         }
-        form {
+        form.form-inline {
+          width: 80%;
           .form-group {
             margin: 0;
             input.form-control {
@@ -277,6 +286,7 @@ footer {
               padding: 0 0 0 12px;
             }
             button {
+              padding: 9px 12px;
               border-radius: 0 8px 8px 0;
               font-size: 12px;
               height: 100%;
@@ -293,9 +303,14 @@ footer {
 
     }
 
-
   #content .container-fluid .row .col-md-4 {
     flex-basis: 50%;
+  }
+  #content .container-fluid .row .col-md-4 .content-wrapped .name span:first-of-type {
+    font-size: 15px; text-align: center;
+  }
+  #content .container-fluid .row .col-md-4 .content-wrapped .name span:last-of-type {
+    font-size: 15px; text-align: left;
   }
 
 }
