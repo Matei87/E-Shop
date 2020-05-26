@@ -279,20 +279,24 @@ h2, h3 {
 
   .container .page .item .items .item-quantity {
     font-size: 15px;
+    padding: 0;
   }
 
   .container .page .item .items .item-quantity .item-removeButton {
-    margin: 0;
+    margin-left: 5%;
+    padding: 0;
   }
 
   .container .page .item .items .item-price {
-    margin-left: 15%;
+    margin-left: 10%;
+    width: 25%;
     padding: 0;
   }
 
   .container .page .item .items .item-total {
-    margin-left: 5%;
-    padding-right: 0;
+    padding: 0;
+    margin: 0;
+    width: 25%;
   }
 
   .container .page .total {
@@ -327,24 +331,10 @@ h2, h3 {
     margin: 0;
   }
 
-  .container .page .item .items .item-quantity .item-removeButton {
-    margin-left: 5%;
-    padding: 0;
-  }
-
-  .container .page .item .items .item-price {
-    margin-left: 10%;
-    width: 25%;
-  }
-
-  .container .page .item .items .item-quantity {
-    padding: 0;
-  }
-
-  .container .page .item .items .item-total {
-    padding: 0;
-    margin: 0;
-    width: 25%;
+  #payme .table-responsive table tbody tr td:nth-of-type(3n) {
+    padding-left: 7px !important;
+    padding-right: 0 !important;
+    width: 20%;
   }
 }
 @media (min-width: 576px) and (max-width: 767.98px) {
