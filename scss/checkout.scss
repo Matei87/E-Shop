@@ -263,7 +263,7 @@ h2, h3 {
   .container .page .item .items .item-quantity .item-quantity-modify .item-arrow-right {
     padding: 0 7px; margin: 0;
   }
-  #payme .table-responsive table tbody tr td.pay {
+  #payme .table-responsive table tbody tr td:nth-of-type(3n) {
     padding-left: 7px !important; padding-right: 0 !important;
     width: 20%;
   }
