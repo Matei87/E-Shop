@@ -100,7 +100,7 @@ h2, h3 {
 //PAYME
 #payme {
   display: none;
-  .container {
+  .container { position: relative;
     padding: 20px 60px;
     .row {
       margin: 0 0 10px; width: 100%;
@@ -137,13 +137,6 @@ h2, h3 {
               &:last-of-type {
                 width: 49%; margin-left: 1%;
               }
-            }
-          }
-          button {
-            color: $blue; border-color: $blue; margin-top: 30px;
-            padding: 5px 30px; @include flexFullCentered;
-            &:hover {
-              background: $blue; color: #f4f5f6; border-color: $blue;
             }
           }
         }
@@ -187,7 +180,13 @@ h2, h3 {
       }
     }
 }
-
+#payme .table-responsive button {
+  color: $blue; border-color: $blue; margin: 30px 0;
+  padding: 5px 30px;  @include flexFullCentered;
+  &:hover {
+    background: $blue; color: #f4f5f6; border-color: $blue;
+  }
+}
 #payme .table-responsive table tbody tr td  .custom-control.custom-radio {
   .custom-control-input:checked ~ .custom-control-label:before {
     background: $blue; box-shadow: 0 0 0 .2rem rgba($blue, .25);
@@ -258,6 +257,26 @@ h2, h3 {
   #payme .row .col-6{
     max-width: 100%; flex-basis: 100%;
   }
+  .container .page .item .items .item-quantity .item-quantity-modify .item-arrow-left {
+    padding: 0 7px; margin: 0;
+  }
+  .container .page .item .items .item-quantity .item-quantity-modify .item-arrow-right {
+    padding: 0 7px; margin: 0;
+  }
+  .container .page .item .items .item-quantity .item-removeButton {
+    margin-left: 5%; padding: 0;
+  }
+  .container .page .item .items .item-price {
+    margin-left: 10%; width: 25%;
+  }
+  .container .page .item .items .item-quantity {
+    padding: 0;
+  }
+
+  .container .page .item .items .item-total {
+    padding: 0; margin: 0; width: 25%;
+  }
+
 }
 
 
