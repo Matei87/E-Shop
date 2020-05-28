@@ -33,7 +33,7 @@
 .container .row .signup form#createAccount .form-group i.fa-lock {
   position: absolute;
   left: 5%;
-  top: 31%;
+  top: 50%;
   transform: translate(-50%, -50%);
   display: flex;
   justify-content: center;
