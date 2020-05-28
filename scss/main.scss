@@ -310,7 +310,12 @@ footer {
   #content .container-fluid .row .col-md-4 .content-wrapped .name span:last-of-type {
     font-size: 15px;
   }
-
+  #content .container-fluid .row .col-md-4 .content-wrapped .hover-content button i {
+    margin: 0;
+  }
+  #content .container-fluid .row .col-md-4 .content-wrapped .hover-content button span {
+    font-size: 14px;
+  }
 }
 
 
