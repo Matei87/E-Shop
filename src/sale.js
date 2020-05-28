@@ -45,9 +45,9 @@ let sale = [
         tag: "quiltedgilet"
     },
     {   quantity: 0,
-        name: "DG Business blazer",
+        name: "Casual blazer",
         price: 12,
-        tag: "dgbusinessblazer"
+        tag: "casualblazer"
     }
 ];
 buttons(sale);
