@@ -21,7 +21,7 @@
             width: 16px; height: 16px; opacity: 0.5;
           }
           i.fa-lock {
-            position: absolute; left: 5%; top: 31%; transform: translate(-50%, -50%);
+            position: absolute; left: 5%; top: 50%; transform: translate(-50%, -50%);
             @include flexFullCentered; padding: 0;
           }
           input {
