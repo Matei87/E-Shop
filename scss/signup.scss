@@ -1,0 +1,96 @@
+@import "variables";
+@import "mixins";
+
+.container {
+  width: 900px;
+  margin: 60px auto; padding: 0;
+
+  .row {
+    display: flex; justify-content: center;
+    .signup {
+      width: 50%; margin: 0;
+      display: flex; flex-direction: column;
+      h3 {
+        margin: 0; color: $black;
+      }
+      form#createAccount {
+        .form-group {
+          margin: 45px 0; position: relative;
+          i {
+            position: absolute; left: 5%; top: 50%; transform: translate(-50%, -50%);
+            width: 16px; height: 16px; opacity: 0.5;
+          }
+          i.fa-lock {
+            position: absolute; left: 5%; top: 34%; transform: translate(-50%, -50%);
+            @include flexFullCentered;
+          }
+          input {
+            width: 100%; border: none; font-style: italic;
+            color: $black; border-radius: .25rem;
+            padding: 10px 10px 10px 10%;
+          }
+          small {
+            margin: 0; font-style: italic; color: $blue !important;
+          }
+        }
+        .form-group:last-of-type {
+          margin: 45px 0 30px; position: relative;
+        }
+        button {
+          color: $blue; border-color: $blue;
+          padding: 5px 30px; @include flexFullCentered;
+          &:hover {
+            background: $blue; color: #f4f5f6; border-color: $blue;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+//max 576px - Extra small
+@media (max-width: 575.98px) {
+  .container {
+    width: 100%;
+  }
+  .container .row { width: 100%; max-width: 100%;
+    display: flex; flex-direction: column;
+  }
+  .container .col-sm-12:first-of-type {
+    margin-bottom: 40px;
+  }
+  .container .row .col-sm-12 {
+    flex-basis: 100%; width: 100%; padding: 0 60px;
+  }
+}
+
+
+//min 576px - max 768px - Small devices
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .container .col-sm-12:first-of-type {
+    margin-bottom: 40px;
+  }
+  .container .row .col-sm-12 {
+    padding: 0 60px;
+  }
+}
+
+
+//min 768px - max 992px - Medium devices
+@media (min-width: 768px) and (max-width: 991.98px) {
+
+}
+
+
+//min 992px - max 1200 - Large devices
+@media (min-width: 992px) and (max-width: 1199.98px) {
+
+}
+
+
+//min 1200px - Extra large
+@media (min-width: 1200px) {
+
+}
