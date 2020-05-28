@@ -214,6 +214,7 @@ header ul.list-styled a:hover {
               border-radius: 8px 0 0 8px; padding: 0 0 0 12px;
             }
             button {
+              padding: 7px 12px;
               border-radius: 0 8px 8px 0;
               font-size: 14px;
             }
@@ -289,7 +290,6 @@ footer {
               padding: 9px 12px;
               border-radius: 0 8px 8px 0;
               font-size: 12px;
-              height: 100%;
             }
           }
           }
@@ -311,7 +311,7 @@ footer {
     font-size: 15px;
   }
   #content .container-fluid .row .col-md-4 .content-wrapped .name span:last-of-type {
-    font-size: 15px; margin: 0;
+    font-size: 15px;  margin: 0;
   }
   #content .container-fluid .row .col-md-4 .content-wrapped .hover-content button i {
     margin: 0;
@@ -351,9 +351,9 @@ footer {
               }
 
               button {
+                padding: 8px 12px;
                 border-radius: 0 8px 8px 0;
                 font-size: 12px;
-                height: 100%;
               }
             }
           }
@@ -390,6 +390,7 @@ footer {
               }
 
               button {
+                padding: 8px 12px;
                 font-size: 14px;
               }
             }
@@ -430,6 +431,7 @@ footer {
               }
 
               button {
+                padding: 8px 12px;
                 font-size: 12px;
               }
             }
