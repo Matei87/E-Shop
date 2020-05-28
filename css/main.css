@@ -280,6 +280,7 @@ header ul.list-styled a:hover {
   padding: 0 0 0 12px;
 }
 #footer-aux .conta .conta-row .conta-row-left .form-inline .form-group button {
+  padding: 7px 12px;
   border-radius: 0 8px 8px 0;
   font-size: 14px;
 }
@@ -358,7 +359,6 @@ footer {
     padding: 9px 12px;
     border-radius: 0 8px 8px 0;
     font-size: 12px;
-    height: 100%;
   }
   #footer-aux .conta .conta-row .conta-row-right {
     display: none;
@@ -369,16 +369,18 @@ footer {
   }
 
   #content .container-fluid .row .col-md-4 .content-wrapped .name {
-    display: flex; justify-content: space-around;
+    display: flex;
+    justify-content: space-around;
   }
-  
+
   #content .container-fluid .row .col-md-4 .content-wrapped .name span:first-of-type {
     font-size: 15px;
   }
 
   #content .container-fluid .row .col-md-4 .content-wrapped .name span:last-of-type {
-    font-size: 15px; margin: 0;
-  } 
+    font-size: 15px;
+    margin: 0;
+  }
 
   #content .container-fluid .row .col-md-4 .content-wrapped .hover-content button i {
     margin: 0;
@@ -412,9 +414,9 @@ footer {
     width: 65%;
   }
   #footer-aux .conta .conta-row .conta-row-left .form-inline .form-group button {
+    padding: 8px 12px;
     border-radius: 0 8px 8px 0;
     font-size: 12px;
-    height: 100%;
   }
   #footer-aux .conta .conta-row .conta-row-right {
     display: none;
@@ -437,6 +439,7 @@ footer {
     width: 65%;
   }
   #footer-aux .conta .conta-row .conta-row-left .form-inline .form-group button {
+    padding: 8px 12px;
     font-size: 14px;
   }
   #footer-aux .conta .conta-row .conta-row-right {
@@ -464,6 +467,7 @@ footer {
     padding: 0 0 0 12px;
   }
   #footer-aux .conta .conta-row .conta-row-left .form-inline .form-group button {
+    padding: 8px 12px;
     font-size: 12px;
   }
   #footer-aux .conta .conta-row .conta-row-right {
