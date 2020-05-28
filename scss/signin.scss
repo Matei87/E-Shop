@@ -11,7 +11,7 @@
     .signin {
       width: 50%; margin: 0;
       display: flex; flex-direction: column;
-      h3 {
+      h2 {
         margin: 0; color: $black;
       }
       form#signAccount {
@@ -65,7 +65,7 @@
     a[role="button"] {
       margin: 0 0 15px;
       color: $blue; border-color: $blue; padding: 10px 30px !important;
-      display: flex; justify-content: center; align-items: center;
+      display: flex; justify-content: center;
       align-self: center;
       &:hover {
         background: $blue; color: #f4f5f6; border-color: $blue;
@@ -81,14 +81,15 @@
   .container {
     width: 100%;
   }
-  .container .row { width: 100%; max-width: 100%;
-    display: flex; flex-direction: column;
-  }
-  .container .col-sm-12:first-of-type {
-    margin-bottom: 40px;
+  .container .row {
+    width: 100%; max-width: 100%;
+    display: flex;
   }
   .container .row .col-sm-12 {
     flex-basis: 100%; width: 100%; padding: 0 60px;
+  }
+  .container .row a[role="button"] {
+    margin: 0;
   }
 }
 
