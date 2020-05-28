@@ -3,24 +3,25 @@
   margin: 60px auto;
   padding: 0;
 }
-.container .signin-signup {
+.container .row {
   display: flex;
+  justify-content: center;
 }
-.container .signin-signup .signin {
-  width: 49%;
+.container .row .signin {
+  width: 50%;
   margin: 0;
   display: flex;
   flex-direction: column;
 }
-.container .signin-signup .signin h3 {
+.container .row .signin h3 {
   margin: 0;
   color: #191919;
 }
-.container .signin-signup .signin form#signAccount .form-group {
+.container .row .signin form#signAccount .form-group {
   margin: 45px 0;
   position: relative;
 }
-.container .signin-signup .signin form#signAccount .form-group i {
+.container .row .signin form#signAccount .form-group i {
   position: absolute;
   left: 5%;
   top: 50%;
@@ -29,7 +30,7 @@
   height: 16px;
   opacity: 0.5;
 }
-.container .signin-signup .signin form#signAccount .form-group input {
+.container .row .signin form#signAccount .form-group input {
   width: 100%;
   border: none;
   font-style: italic;
@@ -37,10 +38,10 @@
   border-radius: 0.25rem;
   padding: 10px 10px 10px 10%;
 }
-.container .signin-signup .signin form#signAccount .form-check {
-  margin: 0 0 30px;
+.container .row .signin form#signAccount .form-check {
+  margin: 0 0 15px;
 }
-.container .signin-signup .signin form#signAccount button {
+.container .row .signin form#signAccount button {
   color: #528CE0;
   border-color: #528CE0;
   padding: 5px 30px;
@@ -48,69 +49,46 @@
   justify-content: center;
   align-items: center;
 }
-.container .signin-signup .signin form#signAccount button:hover {
+.container .row .signin form#signAccount button:hover {
   background: #528CE0;
   color: #f4f5f6;
   border-color: #528CE0;
 }
-.container .signin-signup .signup {
-  width: 49%;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
+.container .row .signin form#signAccount .form-group:nth-child(2) {
+  margin: 45px 0 15px;
 }
-.container .signin-signup .signup h3 {
-  margin: 0;
-  color: #191919;
-}
-.container .signin-signup .signup form#createAccount .form-group {
-  margin: 45px 0;
+.container .row #signupnow {
+  text-align: center;
   position: relative;
+  margin: 15px 0;
 }
-.container .signin-signup .signup form#createAccount .form-group i {
+.container .row #signupnow span::before {
+  content: "";
+  border-top: 1px solid #191919;
   position: absolute;
-  left: 5%;
   top: 50%;
-  transform: translate(-50%, -50%);
-  width: 16px;
-  height: 16px;
-  opacity: 0.5;
+  left: 0;
+  width: 45%;
 }
-.container .signin-signup .signup form#createAccount .form-group i.fa-lock {
+.container .row #signupnow span::after {
+  content: "";
+  border-top: 1px solid #191919;
   position: absolute;
-  left: 5%;
-  top: 34%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  top: 50%;
+  left: 55%;
+  width: 45%;
 }
-.container .signin-signup .signup form#createAccount .form-group input {
-  width: 100%;
-  border: none;
-  font-style: italic;
-  color: #191919;
-  border-radius: 0.25rem;
-  padding: 10px 10px 10px 10%;
-}
-.container .signin-signup .signup form#createAccount .form-group small {
-  margin: 0;
-  font-style: italic;
-  color: #528CE0 !important;
-}
-.container .signin-signup .signup form#createAccount .form-group:last-of-type {
-  margin: 45px 0 30px;
-  position: relative;
-}
-.container .signin-signup .signup form#createAccount button {
+.container .row a[role=button] {
+  margin: 0 0 15px;
   color: #528CE0;
   border-color: #528CE0;
-  padding: 5px 30px;
+  padding: 10px 30px !important;
   display: flex;
   justify-content: center;
   align-items: center;
+  align-self: center;
 }
-.container .signin-signup .signup form#createAccount button:hover {
+.container .row a[role=button]:hover {
   background: #528CE0;
   color: #f4f5f6;
   border-color: #528CE0;
