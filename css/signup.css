@@ -33,11 +33,12 @@
 .container .row .signup form#createAccount .form-group i.fa-lock {
   position: absolute;
   left: 5%;
-  top: 34%;
+  top: 31%;
   transform: translate(-50%, -50%);
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0;
 }
 .container .row .signup form#createAccount .form-group input {
   width: 100%;
@@ -55,6 +56,15 @@
 .container .row .signup form#createAccount .form-group:last-of-type {
   margin: 45px 0 30px;
   position: relative;
+}
+.container .row .signup form#createAccount .form-group:last-of-type i.fa-lock {
+  position: absolute;
+  left: 5%;
+  top: 30%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .container .row .signup form#createAccount button {
   color: #528CE0;
@@ -77,15 +87,20 @@
 
   .container .row {
     width: 100%;
-    max-width: 100%;
-    display: flex;
-    flex-direction: column;
   }
 
   .container .row .col-sm-12 {
     flex-basis: 100%;
     width: 100%;
     padding: 0 60px;
+  }
+
+  .container .row .signup form#createAccount .form-group i.fa-lock {
+    top: 25%;
+  }
+
+  .container .row .signup form#createAccount .form-group:first-of-type i {
+    padding-bottom: 20px;
   }
 }
 @media (min-width: 576px) and (max-width: 767.98px) {
