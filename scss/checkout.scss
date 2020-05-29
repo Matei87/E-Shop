@@ -216,7 +216,7 @@ h2, h3 {
 //max 576px - Extra small
 @media (max-width: 575.98px) {
   .container {
-    padding: 40px;
+    padding: 20px;
   }
   .container .page .header {
     display: none;
@@ -229,18 +229,24 @@ h2, h3 {
   }
   .container .page .item .items .item-name {
     padding: 0;
+    width: 30%;
   }
   .container .page .item .items .item-quantity {
     font-size: 15px; padding: 0;
+  }
+  .container .page .item .items .item-quantity .item-quantity-modify {
+    justify-content: center; align-items: center;
   }
   .container .page .item .items .item-quantity .item-removeButton {
     margin-left: 5%; padding: 0;
   }
   .container .page .item .items .item-price {
-    margin-left: 10%; width: 25%; padding: 0;
+    margin-left: 10%; padding: 0;
+    width: 25%;
   }
   .container .page .item .items .item-total {
-    padding: 0; margin: 0; width: 25%;
+    padding: 0; margin: 0;
+    width: 25%;
   }
   .container .page .total {
     padding: 15px 6% 0 0; font-size: 17px;
@@ -252,7 +258,7 @@ h2, h3 {
     font-size: 17px;
   }
   #payme .container {
-    padding: 40px;
+    padding: 20px;
   }
   #payme .row .col-6{
     max-width: 100%; flex-basis: 100%;
