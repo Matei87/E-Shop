@@ -258,7 +258,7 @@ h2, h3 {
 
 @media (max-width: 575.98px) {
   .container {
-    padding: 40px;
+    padding: 20px;
   }
 
   .container .page .header {
@@ -275,11 +275,17 @@ h2, h3 {
 
   .container .page .item .items .item-name {
     padding: 0;
+    width: 30%;
   }
 
   .container .page .item .items .item-quantity {
     font-size: 15px;
     padding: 0;
+  }
+
+  .container .page .item .items .item-quantity .item-quantity-modify {
+    justify-content: center;
+    align-items: center;
   }
 
   .container .page .item .items .item-quantity .item-removeButton {
@@ -289,8 +295,8 @@ h2, h3 {
 
   .container .page .item .items .item-price {
     margin-left: 10%;
-    width: 25%;
     padding: 0;
+    width: 25%;
   }
 
   .container .page .item .items .item-total {
@@ -313,7 +319,7 @@ h2, h3 {
   }
 
   #payme .container {
-    padding: 40px;
+    padding: 20px;
   }
 
   #payme .row .col-6 {
