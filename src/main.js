@@ -57,7 +57,6 @@ function setItems(product) {
             [product.tag]: product
         };
     }
-    console.log(cartItems[product.tag], product.id);
 
     localStorage.setItem('productsInCart', JSON.stringify(cartItems));
 }
@@ -87,7 +86,7 @@ function displayCart() {
 
         if (cartItems && itemContainer){
             itemContainer.innerHTML = '';
-            Object.values(cartItems).map( i => { console.log(i);
+            Object.values(cartItems).map( i => {
                 itemContainer.innerHTML += `
                 <div class="items col-md-12">
                     <div class="item-imageContainer">
@@ -161,8 +160,6 @@ function deletecartRow() {
     let cartItems = localStorage.getItem('productsInCart');
     cartItems = JSON.parse(cartItems);
     let productName;
-    console.log(cartItems);
-
 
     for(let i=0; i < deleteButtons.length; i++) {
         deleteButtons[i].addEventListener('click', () => {
