@@ -205,7 +205,5 @@ $('#checkoutPaypal').on('click', function () {
     $("#checkoutCollapse").collapse('hide');
 });
 
-let dataSite = document.querySelector('.anfooter');
-let date = new Date();
-let an = date.getFullYear();
-dataSite.textContent = an;
+//Show year in footer
+document.querySelector('.year').textContent = new Date().getFullYear();
