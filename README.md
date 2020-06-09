@@ -1,4 +1,4 @@
-# E-Shop https://matei87.github.io/E-Shop/
+# E-Shop
 
 - Website for your favorite clothes.
 - Add them into the basket, pay them and have a great week :P
