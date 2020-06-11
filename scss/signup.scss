@@ -20,10 +20,6 @@
             position: absolute; left: 5%; top: 50%; transform: translate(-50%, -50%);
             width: 16px; height: 16px; opacity: 0.5;
           }
-          i.fa-lock {
-            position: absolute; left: 5%; top: 50%; transform: translate(-50%, -50%);
-            @include flexFullCentered; padding: 0;
-          }
           input {
             width: 100%; border: none; font-style: italic;
             color: $black; border-radius: .25rem;
@@ -33,10 +29,10 @@
             margin: 0; font-style: italic; color: $blue !important;
           }
         }
-        .form-group:last-of-type {
+        .form-group:nth-of-type(3), .form-group:last-of-type {
           margin: 45px 0 30px; position: relative;
           i.fa-lock {
-            position: absolute; left: 5%; top: 30%; transform: translate(-50%, -50%);
+            position: absolute; left: 5%; top: 33%; transform: translate(-50%, -50%);
             @include flexFullCentered;
           }
         }
