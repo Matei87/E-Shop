@@ -53,14 +53,14 @@
   font-style: italic;
   color: #528CE0 !important;
 }
-.container .row .signup form#createAccount .form-group:last-of-type {
+.container .row .signup form#createAccount .form-group:nth-of-type(3), .container .row .signup form#createAccount .form-group:last-of-type {
   margin: 45px 0 30px;
   position: relative;
 }
-.container .row .signup form#createAccount .form-group:last-of-type i.fa-lock {
+.container .row .signup form#createAccount .form-group:nth-of-type(3) i.fa-lock, .container .row .signup form#createAccount .form-group:last-of-type i.fa-lock {
   position: absolute;
   left: 5%;
-  top: 30%;
+  top: 33%;
   transform: translate(-50%, -50%);
   display: flex;
   justify-content: center;
