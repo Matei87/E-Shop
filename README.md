@@ -1,5 +1,8 @@
 # E-Shop
+E-shop is a JavaScript application to browse clothing online. Discover the latest fashion & trends.
 
-- Website for your favorite clothes.
-- Add them into the basket, pay them and have a great week :P
-- I used HTML / CSS / SASS / Bootstrap / JavaScript for structure and design
+# Built with
+
+* JavaScript
+* Bootstrap
+* SASS
